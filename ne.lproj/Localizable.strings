@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  InAppLocalize
+
+ //  Created by Dip Kasyap on 5/22/15.
+ //  Copyright (c) 2015 Dip Kasyap . All rights reserved.
+ */
+
+
+text="स्वागतम् ";
+languageButton="भाषा छान्नुहोस";
+message = "यो हो";
+Close="बन्द";
+Continue="अगाडि बढौँ";
+greeting="स्वागतम् मित्र";
+Back="पछाडि";
+languageMsg ="अब सम्पूर्ण कार्यको लागि यो भाषा प्रयोग हुने छ।";

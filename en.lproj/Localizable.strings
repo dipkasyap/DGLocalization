@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  InAppLocalize
+
+ //  Created by Dip Kasyap on 5/22/15.
+ //  Copyright (c) 2015 Dip Kasyap . All rights reserved.
+ */
+
+text="Welcome";
+languageButton="Choose Language";
+message = "This is ";
+Close="Close";
+Continue="Conitnue";
+greeting="Welcome Dude";
+Back="Back";
+
+languageMsg = "This Language will be used for Whole Application";
