@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1842C4E41C3B8A6800C06E6B /* DGLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842C4DE1C3B8A6800C06E6B /* DGLocalization.swift */; };
-		1842C4E61C3B8A6800C06E6B /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842C4E11C3B8A6800C06E6B /* LanguageManager.swift */; };
-		1842C4E71C3B8A6800C06E6B /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842C4E21C3B8A6800C06E6B /* Locale.swift */; };
 		1842C4EA1C3B8B1600C06E6B /* nepal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1842C4E81C3B8B1600C06E6B /* nepal.png */; };
 		1842C4EB1C3B8B1600C06E6B /* us.png in Resources */ = {isa = PBXBuildFile; fileRef = 1842C4E91C3B8B1600C06E6B /* us.png */; };
+		1842C4F11C3B8EA400C06E6B /* DGLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842C4EE1C3B8EA400C06E6B /* DGLocalization.swift */; };
+		1842C4F21C3B8EA400C06E6B /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842C4EF1C3B8EA400C06E6B /* LanguageManager.swift */; };
+		1842C4F31C3B8EA400C06E6B /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1842C4F01C3B8EA400C06E6B /* Locale.swift */; };
 		18499AAC1B14912000C816B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18499AAE1B14912000C816B3 /* Localizable.strings */; };
 		18B8D59A1B0F4D8F00D9A9FA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8D5991B0F4D8F00D9A9FA /* WelcomeViewController.swift */; };
 		18EA8B421B0EE004003EA593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA8B411B0EE004003EA593 /* AppDelegate.swift */; };
@@ -37,11 +37,11 @@
 		1842C4D51C3B7EAD00C06E6B /* ne */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ne; path = ne.lproj/Main.strings; sourceTree = "<group>"; };
 		1842C4D61C3B7EAD00C06E6B /* ne */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ne; path = ne.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1842C4D71C3B7EAD00C06E6B /* ne */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ne; path = ne.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1842C4DE1C3B8A6800C06E6B /* DGLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGLocalization.swift; sourceTree = "<group>"; };
-		1842C4E11C3B8A6800C06E6B /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
-		1842C4E21C3B8A6800C06E6B /* Locale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
 		1842C4E81C3B8B1600C06E6B /* nepal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nepal.png; sourceTree = "<group>"; };
 		1842C4E91C3B8B1600C06E6B /* us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = us.png; sourceTree = "<group>"; };
+		1842C4EE1C3B8EA400C06E6B /* DGLocalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGLocalization.swift; sourceTree = "<group>"; };
+		1842C4EF1C3B8EA400C06E6B /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		1842C4F01C3B8EA400C06E6B /* Locale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
 		18499AB21B14936200C816B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		18499AB31B14936200C816B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		18499AB41B14936200C816B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -77,16 +77,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1842C4DD1C3B8A6800C06E6B /* localization */ = {
-			isa = PBXGroup;
-			children = (
-				1842C4DE1C3B8A6800C06E6B /* DGLocalization.swift */,
-				1842C4E11C3B8A6800C06E6B /* LanguageManager.swift */,
-				1842C4E21C3B8A6800C06E6B /* Locale.swift */,
-			);
-			path = localization;
-			sourceTree = "<group>";
-		};
 		1842C4EC1C3B8B1F00C06E6B /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,10 +86,20 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		1842C4ED1C3B8EA400C06E6B /* DGLocalization */ = {
+			isa = PBXGroup;
+			children = (
+				1842C4EE1C3B8EA400C06E6B /* DGLocalization.swift */,
+				1842C4EF1C3B8EA400C06E6B /* LanguageManager.swift */,
+				1842C4F01C3B8EA400C06E6B /* Locale.swift */,
+			);
+			path = DGLocalization;
+			sourceTree = "<group>";
+		};
 		18EA8B331B0EE004003EA593 = {
 			isa = PBXGroup;
 			children = (
-				1842C4DD1C3B8A6800C06E6B /* localization */,
+				1842C4ED1C3B8EA400C06E6B /* DGLocalization */,
 				18499AAE1B14912000C816B3 /* Localizable.strings */,
 				18EA8B3E1B0EE004003EA593 /* DGLocalisation-Demo */,
 				18EA8B571B0EE004003EA593 /* InAppLocalizeTests */,
@@ -264,11 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18EA8B471B0EE004003EA593 /* ViewController.swift in Sources */,
-				1842C4E71C3B8A6800C06E6B /* Locale.swift in Sources */,
+				1842C4F31C3B8EA400C06E6B /* Locale.swift in Sources */,
 				18EA8B421B0EE004003EA593 /* AppDelegate.swift in Sources */,
 				18EA8B451B0EE004003EA593 /* InAppLocalize.xcdatamodeld in Sources */,
-				1842C4E61C3B8A6800C06E6B /* LanguageManager.swift in Sources */,
-				1842C4E41C3B8A6800C06E6B /* DGLocalization.swift in Sources */,
+				1842C4F21C3B8EA400C06E6B /* LanguageManager.swift in Sources */,
+				1842C4F11C3B8EA400C06E6B /* DGLocalization.swift in Sources */,
 				18B8D59A1B0F4D8F00D9A9FA /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
