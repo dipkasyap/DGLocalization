@@ -1,8 +1,14 @@
 # DGLocalisation
 # How to use
 1. Drag DGLocalisation folder to your project.
-2. Create a new file of type string from file -> new -> resources -> string file 
-3. Localize your app from  project -> info -> Localizations, add the language to which you are localizing your app.
+2. Create a new file of type string from file -> new -> resources -> string file  name it exactly ** Localizable.string **
+3. The tile localizable.string will be holding all the translation of your app (see on demo app for more information.)
+4. Localize your app from  project -> info -> Localizations, add the language to which you are localizing your app.
+5. create instance of Let dDLocalization = DGLocalisation()
+ and access like         
+Let someConvertedText = constant.customLocalizedString("KSomeText", comment: "lbl") as String
+
+
 
 #Licence
 
