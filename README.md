@@ -1,4 +1,9 @@
 # DGLocalisation
+# How to use
+1. Drag DGLocalisation folder to your project.
+2. Create a new file of type string from file -> new -> resources -> string file 
+3. Localize your app from  project -> info -> Localizations, add the language to which you are localizing your app.
+
 #Licence
 
 The MIT License (MIT)
