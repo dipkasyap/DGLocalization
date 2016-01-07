@@ -6,7 +6,7 @@
 4. Localize your app from  project -> info -> Localizations, add the language to which you are localizing your app.
 5. create instance of Let dDLocalization = DGLocalisation()
  and access like         
-Let someConvertedText = constant.customLocalizedString("KSomeText", comment: "lbl") as String
+Let someConvertedText = dDLocalization.customLocalizedString("KSomeText", comment: "lbl") as String
 
 
 
