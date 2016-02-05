@@ -16,6 +16,8 @@ let someConvertedText = dDLocalization.customLocalizedString("KSomeText", commen
 
 KSomeText is the key of your text on localizable.string file! 
 
+# For more referance see demo project
+
 #Licence
 
 The MIT License (MIT)
