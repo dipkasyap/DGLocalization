@@ -14,6 +14,7 @@ let dDLocalization = DGLocalization()
 let someConvertedText = dDLocalization.customLocalizedString("KSomeText", comment: "lbl") as String
 ```
 
+KSomeText is the key of your text on localizable.string file! 
 
 #Licence
 
