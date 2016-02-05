@@ -7,11 +7,11 @@
 5. Create instance like
 
  ```
-Let dDLocalization = DGLocalisation()
+let dDLocalization = DGLocalization()
 ```
  and access like  
  ```
-Let someConvertedText = dDLocalization.customLocalizedString("KSomeText", comment: "lbl") as String
+let someConvertedText = dDLocalization.customLocalizedString("KSomeText", comment: "lbl") as String
 ```
 
 
