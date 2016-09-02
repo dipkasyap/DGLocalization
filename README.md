@@ -14,10 +14,10 @@
 ```
  and access like  
  ```
-let someConvertedText = "keyForStringFromLocalizable.string file".localize()
+let someConvertedText = "keyfortext".localize()
 ```
 
-"keyForStringFromLocalizable.string file" is the key of your text on localizable.string file! 
+"keyfortext" is the key of your text on localizable.string file! 
 
 
 # For more referance see demo project
