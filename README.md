@@ -1,20 +1,24 @@
-# DGLocalisation
+# DGLocalization
 # How to use
-1. Drag DGLocalisation folder to your project.
+1. Drag DGLocalization folder to your project.
 2. Create a new file of type string from file -> new -> resources -> string file  name it exactly ** Localizable.string **
 3. The tile localizable.string will be holding all the translation of your app (see on demo app for more information.)
 4. Localize your app from  project -> info -> Localizations, add the language to which you are localizing your app.
-5. Create instance like
-
- ```
-let dDLocalization = DGLocalization()
+5. Start Localizing from didFinishLaunchingWithOptions method of app delegate
+ 
+``` 
+  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        DGLocalization.sharedInstance.startLocalization()
+        return true
+    }
 ```
  and access like  
  ```
-let someConvertedText = dDLocalization.customLocalizedString("KSomeText", comment: "lbl") as String
+let someConvertedText = "keyForStringFromLocalizable.string file".localize()
 ```
 
-KSomeText is the key of your text on localizable.string file! 
+"keyForStringFromLocalizable.string file" is the key of your text on localizable.string file! 
+
 
 # For more referance see demo project
 
