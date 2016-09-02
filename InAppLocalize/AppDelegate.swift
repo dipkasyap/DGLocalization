@@ -16,45 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        //DIP :: 
-        
-        
-        
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let languageManager = LanguageManager.sharedInstance
-      
-        
-        // Check if the language code has been already been set or not.
-        let currentLanguage = userDefaults.stringForKey("DEFAULTS_KEY_LANGUAGE_CODE")
-        
-        if((userDefaults.stringForKey("DEFAULTS_KEY_LANGUAGE_CODE")) == nil){
-            let currentLocale:NSLocale = NSLocale.currentLocale()
-            
-            // GO through available localisations to find the matching one for the device locale.
-            for localisation in languageManager.availableLocales {
-              
-                if (localisation as Locale).languageCode == (currentLocale.objectForKey(NSLocaleLanguageCode)as! String) {
-                    languageManager.setLanguageWithLocale(localisation)
-                    LanguageManager.sharedInstance.DEFAULTS_KEY_LANGUAGE_CODE = localisation.languageCode!
-
-                    break
-                }
-            }
-            
-            
-            // If the device locale doesn't match any of the available ones, just pick the first one.
-            if(((userDefaults.stringForKey("DEFAULTS_KEY_LANGUAGE_CODE"))) == nil){
-                
-                languageManager.setLanguageWithLocale(languageManager.availableLocales[0])
-             }
-        }
-        else {
-            
-            languageManager.DEFAULTS_KEY_LANGUAGE_CODE = currentLanguage!
-            
-        }
-        
+           
+        DGLocalization.sharedInstance.startLocalization()
         return true
     }
 

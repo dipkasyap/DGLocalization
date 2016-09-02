@@ -9,32 +9,34 @@
 
 import UIKit
 
-class LanguageManager: NSObject {
+class DGLocalization: NSObject {
     
     var DEFAULTS_KEY_LANGUAGE_CODE:NSString = NSString()
+    
     var availableLocales = [Locale]()
-    var dGLocale: DGLocalization = DGLocalization()
+    
+    
     
     override init() {
         
         // Manually create a list of available localisations for this example project.
-        let english = Locale()
-        english.initWithLanguageCode("en", countryCode: "gb", name: "United Kingdom")
-        
-        let nepali  = Locale()
-        nepali.initWithLanguageCode("ne", countryCode: "ne", name: "Nepal")
-        self.availableLocales = [english,nepali]
+//        let english = Locale()
+//        english.initWithLanguageCode("en", countryCode: "gb", name: "United Kingdom")
+//        
+//        let nepali  = Locale()
+//        nepali.initWithLanguageCode("ne", countryCode: "ne", name: "Nepal")
+//        self.availableLocales = [english,nepali]
     }
     
-    class var sharedInstance: LanguageManager {
+    class var sharedInstance: DGLocalization {
         
         struct Static {
-            static var instance: LanguageManager?
+            static var instance: DGLocalization?
             static var token: dispatch_once_t = 0
         }
         
         dispatch_once(&Static.token) {
-            Static.instance = LanguageManager()
+            Static.instance = DGLocalization()
         }
         
         return Static.instance!
@@ -46,19 +48,20 @@ class LanguageManager: NSObject {
         print("crashing here")
     }
     
-    func getSelectedLocale()->Locale{
-        var selectedLocale = Locale()
-        //Get the Language code
-        let languageCode = NSUserDefaults.standardUserDefaults().stringForKey("DEFAULTS_KEY_LANGUAGE_CODE")?.lowercaseString
-        for locale in availableLocales {
-            if(locale.languageCode == languageCode){
-                selectedLocale = locale
-                break
-                
-            }
-        }
-        return selectedLocale
-    }
+//    func getSelectedLocale()->Locale{
+//        var selectedLocale = Locale()
+//        
+//        //Get the Language code
+//        let languageCode = NSUserDefaults.standardUserDefaults().stringForKey("DEFAULTS_KEY_LANGUAGE_CODE")?.lowercaseString
+//        for locale in availableLocales {
+//            if(locale.languageCode == languageCode){
+//                selectedLocale = locale
+//                break
+//                
+//            }
+//        }
+//        return selectedLocale
+//    }
     
     
     
@@ -66,12 +69,10 @@ class LanguageManager: NSObject {
     func getTranslationForKey(key: NSString)->NSString {
         
         // Get the language code.
-        print("language code after is \(dGLocale.getLanguageCode())")
         let languageCode =  NSUserDefaults.standardUserDefaults().stringForKey("DEFAULTS_KEY_LANGUAGE_CODE")
         
         // Get language bundle that is relevant.
         let bundlePath = NSBundle.mainBundle().pathForResource(languageCode as String?, ofType: "lproj")
-        print("\(bundlePath)")
         let Languagebundle = NSBundle(path: bundlePath!)
         
         // Get the translated string using the language bundle.

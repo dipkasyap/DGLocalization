@@ -9,12 +9,13 @@
 import UIKit
 
 class Locale: NSObject {
-    var name:NSString?
+  
+//    var name:NSString?
     var languageCode:NSString?
     var countryCode:NSString?
     
     func initWithLanguageCode(languageCode: NSString,countryCode:NSString,name: NSString)->AnyObject{
-        self.name = name
+//        self.name = name
         self.languageCode = languageCode
         self.countryCode = countryCode
         return self
