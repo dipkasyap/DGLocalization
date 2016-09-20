@@ -20,7 +20,12 @@ let someConvertedText = "keyfortext".localize()
 ```
 "keyfortext" is the key of your text on localizable.string file! 
 
-
+#Delegate
+```
+ func languageDidChanged(to: (String)) {
+        print("language changed to \(to)")
+    }
+```
 # For more referance see demo project
 
 #Licence
