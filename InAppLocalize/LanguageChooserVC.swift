@@ -22,7 +22,7 @@ class LanguageChooserVC: UIViewController {
 
         
         self.decorate()
-        self.continueButton.setTitle("Continue".localize(), forState: UIControlState.Normal)
+        self.continueButton.setTitle("Continue".localize(), for: UIControlState())
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,31 +32,29 @@ class LanguageChooserVC: UIViewController {
     
     
     
-    @IBAction func changeLanguage(sender: AnyObject) {
+    @IBAction func changeLanguage(_ sender: AnyObject) {
         
         let selectLanguage = "languageButton".localize()
         let msg = "languageMsg".localize()
         
-        let moviePicker = UIAlertController(title: selectLanguage, message: msg, preferredStyle: .ActionSheet)
+        let moviePicker = UIAlertController(title: selectLanguage, message: msg, preferredStyle: .actionSheet)
         var language = ["नेपाली","English"]
        
         for index in 0..<language.count {
 
-            let normalAction = UIAlertAction(title: language[index], style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) -> Void in
+            let normalAction = UIAlertAction(title: language[index], style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) -> Void in
                 
                 if index == 0 {
                     
-                    let english = Locale()
-                    english.initWithLanguageCode("ne", countryCode: "ne", name: "Nepal")
-                    DGLocalization.sharedInstance.setLanguage(withCode:english)
+                    let Nepali = Locale().initWithLanguageCode("ne", countryCode: "ne", name: "Nepal")
+                    DGLocalization.sharedInstance.setLanguage(withCode:Nepali)
                     
                     //Load selected Language to Views
                     self.decorate()
                 }
                 else {
                                         
-                    let english = Locale()
-                    english.initWithLanguageCode("en", countryCode: "gb", name: "United Kingdom")
+                    let english = Locale().initWithLanguageCode("en", countryCode: "gb", name: "United Kingdom")
                     DGLocalization.sharedInstance.setLanguage(withCode:english)
                     
                     //Load selected Language to Views
@@ -66,20 +64,20 @@ class LanguageChooserVC: UIViewController {
             moviePicker.addAction(normalAction)
         }
                 
-        let closeAction = UIAlertAction(title:"Close".localize(), style: UIAlertActionStyle.Cancel) { (action: UIAlertAction!) -> Void in
+        let closeAction = UIAlertAction(title:"Close".localize(), style: UIAlertActionStyle.cancel) { (action: UIAlertAction!) -> Void in
         }
         
         moviePicker.addAction(closeAction)
-        self.presentViewController(moviePicker, animated: true, completion: nil)
+        self.present(moviePicker, animated: true, completion: nil)
     }
     
     
     
-    @IBAction func btnContinue(sender: AnyObject) {
+    @IBAction func btnContinue(_ sender: AnyObject) {
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextView = storyboard.instantiateViewControllerWithIdentifier("welcomeView") as!WelcomeViewController
-        self.presentViewController(nextView, animated:true, completion: nil)
+        let nextView = storyboard.instantiateViewController(withIdentifier: "welcomeView") as!WelcomeViewController
+        self.present(nextView, animated:true, completion: nil)
         
         
     }
@@ -89,8 +87,8 @@ class LanguageChooserVC: UIViewController {
         
         self.textLabel.text = "text".localize()
         
-        self.btnLanguageChooser.setTitle("languageButton".localize(), forState: UIControlState.Normal)
-        self.continueButton.setTitle("Continue".localize(), forState: UIControlState.Normal)
+        self.btnLanguageChooser.setTitle("languageButton".localize(), for: UIControlState())
+        self.continueButton.setTitle("Continue".localize(), for: UIControlState())
         
     }
     

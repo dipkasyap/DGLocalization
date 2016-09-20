@@ -30,13 +30,13 @@ class WelcomeViewController: UIViewController {
     
     func setLanguage(){
         self.Greeting.text = "greeting".localize()
-        self.backBtn.setTitle("Back".localize(), forState: UIControlState.Normal)
+        self.backBtn.setTitle("Back".localize(), for: UIControlState())
         
     }
     
     func setContents(){
         
-        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        imageView.contentMode = UIViewContentMode.scaleAspectFill
         
         let lang = DGLocalization.sharedInstance.getCurrentLanguage()
         
@@ -48,8 +48,8 @@ class WelcomeViewController: UIViewController {
         }
     }
     
-    @IBAction func cloaseMe(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cloaseMe(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
         
     }
 }
