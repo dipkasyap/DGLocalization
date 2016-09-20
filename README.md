@@ -1,5 +1,7 @@
 # DGLocalization
 # Supports Swift 3.0
+For Swift 2.X user previous release
+
 ![dglocalization](https://cloud.githubusercontent.com/assets/12591229/18203270/b1ba7076-7135-11e6-9ead-6921c8d19ab8.gif)
 # How to use
 1. Drag DGLocalization folder to your project.
