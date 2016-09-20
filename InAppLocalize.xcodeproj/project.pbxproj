@@ -14,11 +14,11 @@
 		18B8D59A1B0F4D8F00D9A9FA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8D5991B0F4D8F00D9A9FA /* WelcomeViewController.swift */; };
 		18EA8B421B0EE004003EA593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA8B411B0EE004003EA593 /* AppDelegate.swift */; };
 		18EA8B451B0EE004003EA593 /* InAppLocalize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18EA8B431B0EE004003EA593 /* InAppLocalize.xcdatamodeld */; };
-		18EA8B471B0EE004003EA593 /* LanguageChooserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA8B461B0EE004003EA593 /* LanguageChooserVC.swift */; };
 		18EA8B4A1B0EE004003EA593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EA8B481B0EE004003EA593 /* Main.storyboard */; };
 		18EA8B4C1B0EE004003EA593 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EA8B4B1B0EE004003EA593 /* Images.xcassets */; };
 		18EA8B4F1B0EE004003EA593 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EA8B4D1B0EE004003EA593 /* LaunchScreen.xib */; };
 		18EA8B5B1B0EE004003EA593 /* InAppLocalizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA8B5A1B0EE004003EA593 /* InAppLocalizeTests.swift */; };
+		3EEF663A1D9101B3009E989B /* LanguageChooserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF66391D9101B3009E989B /* LanguageChooserVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +42,13 @@
 		18EA8B401B0EE004003EA593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18EA8B411B0EE004003EA593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18EA8B441B0EE004003EA593 /* InAppLocalize.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InAppLocalize.xcdatamodel; sourceTree = "<group>"; };
-		18EA8B461B0EE004003EA593 /* LanguageChooserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageChooserVC.swift; sourceTree = "<group>"; };
 		18EA8B491B0EE004003EA593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18EA8B4B1B0EE004003EA593 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18EA8B4E1B0EE004003EA593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		18EA8B541B0EE004003EA593 /* InAppLocalizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppLocalizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EA8B591B0EE004003EA593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18EA8B5A1B0EE004003EA593 /* InAppLocalizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppLocalizeTests.swift; sourceTree = "<group>"; };
+		3EEF66391D9101B3009E989B /* LanguageChooserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageChooserVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 			children = (
 				18EA8B411B0EE004003EA593 /* AppDelegate.swift */,
 				18B8D5991B0F4D8F00D9A9FA /* WelcomeViewController.swift */,
-				18EA8B461B0EE004003EA593 /* LanguageChooserVC.swift */,
+				3EEF66391D9101B3009E989B /* LanguageChooserVC.swift */,
 				18EA8B481B0EE004003EA593 /* Main.storyboard */,
 				1842C4EC1C3B8B1F00C06E6B /* Images */,
 				18EA8B4B1B0EE004003EA593 /* Images.xcassets */,
@@ -255,7 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18EA8B471B0EE004003EA593 /* LanguageChooserVC.swift in Sources */,
+				3EEF663A1D9101B3009E989B /* LanguageChooserVC.swift in Sources */,
 				18EA8B421B0EE004003EA593 /* AppDelegate.swift in Sources */,
 				18EA8B451B0EE004003EA593 /* InAppLocalize.xcdatamodeld in Sources */,
 				1842C4F11C3B8EA400C06E6B /* DGLocalization.swift in Sources */,

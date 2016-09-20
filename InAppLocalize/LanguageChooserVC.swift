@@ -20,17 +20,15 @@ class LanguageChooserVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        DGLocalization.sharedInstance.Delegate = self;
         
         self.decorate()
-        self.continueButton.setTitle("Continue".localize(), for: UIControlState())
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     @IBAction func changeLanguage(_ sender: AnyObject) {
         
@@ -46,7 +44,7 @@ class LanguageChooserVC: UIViewController {
                 
                 if index == 0 {
                     
-                    let Nepali = Locale().initWithLanguageCode("ne", countryCode: "ne", name: "Nepal")
+                    let Nepali = Locale().initWithLanguageCode(languageCode: "ne", countryCode: "ne", name: "Nepal")
                     DGLocalization.sharedInstance.setLanguage(withCode:Nepali)
                     
                     //Load selected Language to Views
@@ -54,7 +52,7 @@ class LanguageChooserVC: UIViewController {
                 }
                 else {
                                         
-                    let english = Locale().initWithLanguageCode("en", countryCode: "gb", name: "United Kingdom")
+                    let english = Locale().initWithLanguageCode(languageCode: "en", countryCode: "gb", name: "United Kingdom")
                     DGLocalization.sharedInstance.setLanguage(withCode:english)
                     
                     //Load selected Language to Views
@@ -73,10 +71,10 @@ class LanguageChooserVC: UIViewController {
     
     
     
-    @IBAction func btnContinue(_ sender: AnyObject) {
+    @IBAction func btnContinue( _ sender: AnyObject) {
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextView = storyboard.instantiateViewController(withIdentifier: "welcomeView") as!WelcomeViewController
+        let nextView = storyboard.instantiateViewController(withIdentifier: "welcomeView") as! WelcomeViewController
         self.present(nextView, animated:true, completion: nil)
         
         
@@ -87,10 +85,17 @@ class LanguageChooserVC: UIViewController {
         
         self.textLabel.text = "text".localize()
         
-        self.btnLanguageChooser.setTitle("languageButton".localize(), for: UIControlState())
-        self.continueButton.setTitle("Continue".localize(), for: UIControlState())
+        self.btnLanguageChooser.setTitle("languageButton".localize(), for: UIControlState.normal)
+        self.continueButton.setTitle("Continue".localize(), for: UIControlState.normal)
         
     }
     
+}
+
+//MARK:-DGLoclalization Delegate
+extension LanguageChooserVC:DGLocalizationDelegate {
+    func languageDidChanged(to: (String)) {
+        print("language changed to \(to)")
+    }
 }
 

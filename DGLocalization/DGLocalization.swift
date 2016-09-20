@@ -6,10 +6,14 @@
 
 import UIKit
 
+@objc protocol DGLocalizationDelegate {
+    @objc optional func languageDidChanged(to:(String))
+}
+
 class DGLocalization:NSObject {
     
-  //  static let sharedInstance: DGLocalization = { DGLocalization() }()
-
+   weak var Delegate:DGLocalizationDelegate?
+    
     //MARK:- Instance var
     var DEFAULTS_KEY_LANGUAGE_CODE = "DEFAULTS_KEY_LANGUAGE_CODE"
     var availableLocales = [Locale]() {
@@ -22,38 +26,28 @@ class DGLocalization:NSObject {
     
     //MARK:- Int
     override init() {
-        let english = Locale().initWithLanguageCode("en", countryCode: "gb", name: "United Kingdom")
-        self.availableLocales = [english]
+        let english = Locale().initWithLanguageCode(languageCode: "en", countryCode: "gb", name: "United Kingdom")
+        self.availableLocales = [english as! Locale]
     }
     
     //MARK:- Singleton
-//    class var sharedInstance: DGLocalization {
-//        struct Static {
-//            static var instance: DGLocalization?
-//            static var token: Int = 0
-//        }
-//        
-//        _ = DGLocalization.__once
-//        return Static.instance!
-//    }
-//    
-    static let sharedInstance: DGLocalization = { DGLocalization() }()
-
+    static let sharedInstance: DGLocalization = {DGLocalization()}()
+    
     //MARK:- Methods
     func startLocalization(){
         
         let userDefaults = UserDefaults.standard
-        let languageManager = DGLocalization.sharedInstance
+       let languageManager = DGLocalization.sharedInstance
         
         // Check if the language code has been already been set or not.
         let currentLanguage = userDefaults.string(forKey: DEFAULTS_KEY_LANGUAGE_CODE)
         
         if((userDefaults.string(forKey: DEFAULTS_KEY_LANGUAGE_CODE)) == nil){
-            let currentLocale:Foundation.Locale = Foundation.Locale.current
+            let currentLocale:NSLocale = NSLocale.current as NSLocale
             
             // GO through available localisations to find the matching one for the device locale.
             for locale in languageManager.availableLocales {
-                if (locale.languageCode!) == ((currentLocale as NSLocale).object(forKey: NSLocale.Key.languageCode) as! NSString) {
+                if (locale.languageCode!) == (currentLocale.object(forKey: NSLocale.Key.languageCode) as! NSString) {
                     languageManager.setLanguage(withCode: locale)
                     break
                 }
@@ -64,24 +58,30 @@ class DGLocalization:NSObject {
             }
         }
         else {
-            languageManager.setLanguage(withCode: Locale().initWithLanguageCode(currentLanguage! as NSString, countryCode: currentLanguage! as NSString, name: currentLanguage! as NSString) as! Locale)
+            languageManager.setLanguage(withCode: Locale().initWithLanguageCode(languageCode: currentLanguage! as NSString, countryCode: currentLanguage! as NSString, name: currentLanguage! as NSString) as! Locale)
         }
     }
     
-    func addLanguage(_ newLang: Locale)  {
+    func addLanguage(newLang: Locale)  {
         self.availableLocales.append(newLang)
     }
     func getCurrentLanguage()->Locale {
         return currentLocale
     }
     
-    func setLanguage(withCode langCode: Locale) {
+    func setLanguage(withCode langCode: AnyObject) {
+        let langCode = langCode as! Locale
         UserDefaults.standard.set(langCode.languageCode, forKey:DEFAULTS_KEY_LANGUAGE_CODE)
+        //delegate
+        if let delegate = Delegate {
+            delegate.languageDidChanged!(to: langCode.languageCode as! (String))
+        }
+        
         self.currentLocale = langCode
     }
     
     // DIP Return a translated string for the given string key.
-    func getTranslationForKey(_ key: NSString)->NSString {
+    func getTranslationForKey(key: NSString)->NSString {
         
         // Get the language code.
         let languageCode =  UserDefaults.standard.string(forKey: DEFAULTS_KEY_LANGUAGE_CODE)
@@ -104,7 +104,7 @@ class Locale: NSObject {
     var languageCode:NSString?
     var countryCode:NSString?
     
-    func initWithLanguageCode(_ languageCode: NSString,countryCode:NSString,name: NSString)->AnyObject{
+    func initWithLanguageCode(languageCode: NSString,countryCode:NSString,name: NSString)->AnyObject{
         self.name = name
         self.languageCode = languageCode
         self.countryCode = countryCode
@@ -117,6 +117,6 @@ class Locale: NSObject {
 extension String {
     
     func localize()->String{
-        return DGLocalization.sharedInstance.getTranslationForKey(self as NSString) as String
+        return DGLocalization.sharedInstance.getTranslationForKey(key: self as NSString) as String
     }
 }
