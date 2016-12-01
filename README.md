@@ -6,7 +6,7 @@ For Swift 2.X use previous release for swift 2.x
 # How to use
 1. Drag DGLocalization folder to your project.
 2. Create a new file of type string from file -> new -> resources -> string file  name it exactly ** Localizable.string **
-3. The tile localizable.string will be holding all the translation of your app (see on demo app for more information.) IMPORTANT: the localizable.string file must contains key and value pair in format of "key" = "value"; dont forgot the ;(semicolon) at the end of line
+3. The tile localizable.string will be holding all the translation of your app (see on demo app for more information.) IMPORTANT: the localizable.string file must contain key and value pair in format of "key" = "value"; dont forgot the ;(semicolon) at the end of line
 4. Localize your app from  project -> info -> Localizations, add the language to which you are localizing your app.
 5. Start Localizing from didFinishLaunchingWithOptions method of app delegate
  
