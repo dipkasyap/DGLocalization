@@ -29,8 +29,8 @@ class WelcomeViewController: UIViewController {
     
     
     func setLanguage(){
-        self.Greeting.text = "greeting".localize()
-        self.backBtn.setTitle("Back".localize(), for: UIControlState())
+        self.Greeting.text = "greeting".localize
+        self.backBtn.setTitle("Back".localize, for: UIControlState())
         
     }
     

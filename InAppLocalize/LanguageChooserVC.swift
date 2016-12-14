@@ -32,8 +32,8 @@ class LanguageChooserVC: UIViewController {
     
     @IBAction func changeLanguage(_ sender: AnyObject) {
         
-        let selectLanguage = "languageButton".localize()
-        let msg = "languageMsg".localize()
+        let selectLanguage = "languageButton".localize
+        let msg = "languageMsg".localize
         
         let moviePicker = UIAlertController(title: selectLanguage, message: msg, preferredStyle: .actionSheet)
         var language = ["नेपाली","English"]
@@ -62,7 +62,7 @@ class LanguageChooserVC: UIViewController {
             moviePicker.addAction(normalAction)
         }
                 
-        let closeAction = UIAlertAction(title:"Close".localize(), style: UIAlertActionStyle.cancel) { (action: UIAlertAction!) -> Void in
+        let closeAction = UIAlertAction(title:"Close".localize, style: UIAlertActionStyle.cancel) { (action: UIAlertAction!) -> Void in
         }
         
         moviePicker.addAction(closeAction)
@@ -83,10 +83,10 @@ class LanguageChooserVC: UIViewController {
     //DIP:: Do view recorating form here
     func decorate() {
         
-        self.textLabel.text = "text".localize()
+        self.textLabel.text = "text".localize
         
-        self.btnLanguageChooser.setTitle("languageButton".localize(), for: UIControlState.normal)
-        self.continueButton.setTitle("Continue".localize(), for: UIControlState.normal)
+        self.btnLanguageChooser.setTitle("languageButton".localize, for: UIControlState.normal)
+        self.continueButton.setTitle("Continue".localize, for: UIControlState.normal)
         
     }
     
