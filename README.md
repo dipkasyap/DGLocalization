@@ -20,8 +20,12 @@ For Swift 2.X use previous release for swift 2.x
 Setting new language : IMPORTANT -> Do not forgot to set the language code to the exact of lproj folder that is created on localization of your string file
 
 ```
+//make instance
 let english = Locale().initWithLanguageCode(languageCode: "en", countryCode: "gb", name: "United Kingdom")
-                    DGLocalization.sharedInstance.setLanguage(withCode:english)
+
+//set current language
+DGLocalization.sharedInstance.setLanguage(withCode:english)
+
 ```
 
  and access like  
