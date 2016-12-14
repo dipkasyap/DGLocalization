@@ -16,6 +16,14 @@ For Swift 2.X use previous release for swift 2.x
         return true
     }
 ```
+#Methods
+Setting new language : IMPORTANT -> Do not forgot to set the language code to the exact of lproj folder that is created on localization of your string file
+
+```
+let english = Locale().initWithLanguageCode(languageCode: "en", countryCode: "gb", name: "United Kingdom")
+                    DGLocalization.sharedInstance.setLanguage(withCode:english)
+```
+
  and access like  
  ```
 let someConvertedText = "keyfortext".localize()
