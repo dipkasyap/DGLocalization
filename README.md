@@ -1,5 +1,8 @@
 
-![logo](https://user-images.githubusercontent.com/12591229/36713674-ded0ca38-1bb6-11e8-8448-1e18b7d345cf.png)
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/12591229/36713674-ded0ca38-1bb6-11e8-8448-1e18b7d345cf.png">
+</p>
+
 # DGLocalization 
 # Supports Swift 3.0
 For Swift 2.X use previous release for swift 2.x
