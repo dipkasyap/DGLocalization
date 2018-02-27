@@ -6,8 +6,9 @@
 # DGLocalization 
 # Supports Swift 3.0
 For Swift 2.X use previous release for swift 2.x
-
-![dglocalization](https://cloud.githubusercontent.com/assets/12591229/18203270/b1ba7076-7135-11e6-9ead-6921c8d19ab8.gif)
+<p align="center"> 
+ <img src= "https://cloud.githubusercontent.com/assets/12591229/18203270/b1ba7076-7135-11e6-9ead-6921c8d19ab8.gif">
+</p>
 # How to use
 1. Drag DGLocalization folder to your project.
 2. Create a new file of type string from file -> new -> resources -> string file  name it exactly ** Localizable.string **
