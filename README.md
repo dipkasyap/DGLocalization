@@ -9,12 +9,13 @@ For Swift 2.X use previous release for swift 2.x
 <p align="center"> 
  <img src= "https://cloud.githubusercontent.com/assets/12591229/18203270/b1ba7076-7135-11e6-9ead-6921c8d19ab8.gif">
 </p>
+
 # How to use
-1. Drag DGLocalization folder to your project.
-2. Create a new file of type string from file -> new -> resources -> string file  name it exactly ** Localizable.string **
-3. The tile localizable.string will be holding all the translation of your app (see on demo app for more information.) IMPORTANT: the localizable.string file must contain key and value pair in format of "key" = "value"; dont forgot the ;(semicolon) at the end of line
-4. Localize your app from  project -> info -> Localizations, add the language to which you are localizing your app.
-5. Start Localizing from didFinishLaunchingWithOptions method of app delegate
+ 1. Drag DGLocalization folder to your project.
+ 2. Create a new file of type string from file -> new -> resources -> string file  name it exactly ** Localizable.string **
+ 3. The tile localizable.string will be holding all the translation of your app (see on demo app for more information.) IMPORTANT: the localizable.string file must contain key and value pair in format of "key" = "value"; dont forgot the ;(semicolon) at the end of line
+ 4. Localize your app from  project -> info -> Localizations, add the language to which you are localizing your app.
+ 5. Start Localizing from didFinishLaunchingWithOptions method of app delegate
  
 ``` 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -22,7 +23,7 @@ For Swift 2.X use previous release for swift 2.x
         return true
     }
 ```
-#Methods
+# Methods
 Setting new language : IMPORTANT -> Do not forgot to set the language code to the exact of lproj folder that is created on localization of your string file
 
 ```
@@ -40,7 +41,7 @@ let someConvertedText = "keyfortext".localize
 ```
 "keyfortext" is the key of your text on localizable.string file! 
 
-#Delegate
+# Delegate
 ```
  func languageDidChanged(to: (String)) {
         print("language changed to \(to)")
@@ -48,7 +49,7 @@ let someConvertedText = "keyfortext".localize
 ```
 # For more referance see demo project
 
-#Licence
+# Licence
 
 The MIT License (MIT)
 Copyright (c) 2014 Dip Kasyap (pr0gramm3r8hai)
