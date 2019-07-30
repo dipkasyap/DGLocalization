@@ -85,7 +85,7 @@ class DGLocalization:NSObject {
         UserDefaults.standard.set(langCode.languageCode, forKey:DEFAULTS_KEY_LANGUAGE_CODE)
         //delegate
         if let delegate = Delegate {
-            delegate.languageDidChanged!(to: langCode.languageCode as! (String))
+            delegate.languageDidChanged!(to: langCode.languageCode! as (String))
         }
         
         self.currentLocale = langCode

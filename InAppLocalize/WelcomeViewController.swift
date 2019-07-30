@@ -30,13 +30,13 @@ class WelcomeViewController: UIViewController {
     
     func setLanguage(){
         self.Greeting.text = "greeting".localize
-        self.backBtn.setTitle("Back".localize, for: UIControlState())
+        self.backBtn.setTitle("Back".localize, for: UIControl.State())
         
     }
     
     func setContents(){
         
-        imageView.contentMode = UIViewContentMode.scaleAspectFill
+        imageView.contentMode = UIView.ContentMode.scaleAspectFill
         
         let lang = DGLocalization.sharedInstance.getCurrentLanguage()
         

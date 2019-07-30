@@ -40,7 +40,7 @@ class LanguageChooserVC: UIViewController {
        
         for index in 0..<language.count {
 
-            let normalAction = UIAlertAction(title: language[index], style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) -> Void in
+            let normalAction = UIAlertAction(title: language[index], style: UIAlertAction.Style.default, handler: { (action: UIAlertAction!) -> Void in
                 
                 if index == 0 {
                     
@@ -62,7 +62,7 @@ class LanguageChooserVC: UIViewController {
             moviePicker.addAction(normalAction)
         }
                 
-        let closeAction = UIAlertAction(title:"Close".localize, style: UIAlertActionStyle.cancel) { (action: UIAlertAction!) -> Void in
+        let closeAction = UIAlertAction(title:"Close".localize, style: UIAlertAction.Style.cancel) { (action: UIAlertAction!) -> Void in
         }
         
         moviePicker.addAction(closeAction)
@@ -85,8 +85,8 @@ class LanguageChooserVC: UIViewController {
         
         self.textLabel.text = "text".localize
         
-        self.btnLanguageChooser.setTitle("languageButton".localize, for: UIControlState.normal)
-        self.continueButton.setTitle("Continue".localize, for: UIControlState.normal)
+        self.btnLanguageChooser.setTitle("languageButton".localize, for: UIControl.State.normal)
+        self.continueButton.setTitle("Continue".localize, for: UIControl.State.normal)
         
     }
     
