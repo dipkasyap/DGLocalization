@@ -17,19 +17,8 @@
 		18EA8B4A1B0EE004003EA593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EA8B481B0EE004003EA593 /* Main.storyboard */; };
 		18EA8B4C1B0EE004003EA593 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EA8B4B1B0EE004003EA593 /* Images.xcassets */; };
 		18EA8B4F1B0EE004003EA593 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EA8B4D1B0EE004003EA593 /* LaunchScreen.xib */; };
-		18EA8B5B1B0EE004003EA593 /* InAppLocalizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA8B5A1B0EE004003EA593 /* InAppLocalizeTests.swift */; };
 		3EEF663A1D9101B3009E989B /* LanguageChooserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF66391D9101B3009E989B /* LanguageChooserVC.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		18EA8B551B0EE004003EA593 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18EA8B341B0EE004003EA593 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 18EA8B3B1B0EE004003EA593;
-			remoteInfo = InAppLocalize;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1842C4D71C3B7EAD00C06E6B /* ne */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ne; path = ne.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -45,7 +34,6 @@
 		18EA8B491B0EE004003EA593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18EA8B4B1B0EE004003EA593 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18EA8B4E1B0EE004003EA593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		18EA8B541B0EE004003EA593 /* InAppLocalizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppLocalizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EA8B591B0EE004003EA593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18EA8B5A1B0EE004003EA593 /* InAppLocalizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppLocalizeTests.swift; sourceTree = "<group>"; };
 		3EEF66391D9101B3009E989B /* LanguageChooserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageChooserVC.swift; sourceTree = "<group>"; };
@@ -53,13 +41,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		18EA8B391B0EE004003EA593 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		18EA8B511B0EE004003EA593 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -101,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				18EA8B3C1B0EE004003EA593 /* InAppLocalize.app */,
-				18EA8B541B0EE004003EA593 /* InAppLocalizeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,24 +148,6 @@
 			productReference = 18EA8B3C1B0EE004003EA593 /* InAppLocalize.app */;
 			productType = "com.apple.product-type.application";
 		};
-		18EA8B531B0EE004003EA593 /* InAppLocalizeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 18EA8B611B0EE004003EA593 /* Build configuration list for PBXNativeTarget "InAppLocalizeTests" */;
-			buildPhases = (
-				18EA8B501B0EE004003EA593 /* Sources */,
-				18EA8B511B0EE004003EA593 /* Frameworks */,
-				18EA8B521B0EE004003EA593 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				18EA8B561B0EE004003EA593 /* PBXTargetDependency */,
-			);
-			name = InAppLocalizeTests;
-			productName = InAppLocalizeTests;
-			productReference = 18EA8B541B0EE004003EA593 /* InAppLocalizeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,17 +155,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = apple;
 				TargetAttributes = {
 					18EA8B3B1B0EE004003EA593 = {
 						CreatedOnToolsVersion = 6.3;
-						LastSwiftMigration = 0800;
-					};
-					18EA8B531B0EE004003EA593 = {
-						CreatedOnToolsVersion = 6.3;
-						LastSwiftMigration = 0800;
-						TestTargetID = 18EA8B3B1B0EE004003EA593;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -222,7 +179,6 @@
 			projectRoot = "";
 			targets = (
 				18EA8B3B1B0EE004003EA593 /* InAppLocalize */,
-				18EA8B531B0EE004003EA593 /* InAppLocalizeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -241,13 +197,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		18EA8B521B0EE004003EA593 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -263,23 +212,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		18EA8B501B0EE004003EA593 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				18EA8B5B1B0EE004003EA593 /* InAppLocalizeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		18EA8B561B0EE004003EA593 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 18EA8B3B1B0EE004003EA593 /* InAppLocalize */;
-			targetProxy = 18EA8B551B0EE004003EA593 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		18499AAE1B14912000C816B3 /* Localizable.strings */ = {
@@ -333,6 +266,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -358,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -391,6 +325,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -409,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -424,10 +359,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InAppLocalize/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esignature.www.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -436,49 +372,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InAppLocalize/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esignature.www.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		18EA8B621B0EE004003EA593 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = InAppLocalizeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esignature.www.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InAppLocalize.app/InAppLocalize";
-			};
-			name = Debug;
-		};
-		18EA8B631B0EE004003EA593 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = InAppLocalizeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esignature.www.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InAppLocalize.app/InAppLocalize";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -499,15 +398,6 @@
 			buildConfigurations = (
 				18EA8B5F1B0EE004003EA593 /* Debug */,
 				18EA8B601B0EE004003EA593 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		18EA8B611B0EE004003EA593 /* Build configuration list for PBXNativeTarget "InAppLocalizeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				18EA8B621B0EE004003EA593 /* Debug */,
-				18EA8B631B0EE004003EA593 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

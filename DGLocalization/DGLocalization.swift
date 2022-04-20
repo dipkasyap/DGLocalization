@@ -1,7 +1,7 @@
 //  DGLocalization.swift
 // Created by Dip Kasyap on 5/22/15.
 // Copyright (c) 2015 Dip Kasyap . All rights reserved.
-// DIP: COPYLEFT : Feel Free to Customize & Improve :)
+// Feel Free to Customize & Improve :)
 /*
 The MIT License (MIT)
 Copyright (c) 2016 Dip Kasyap (pr0gramm3r8hai). All rights reserved.
@@ -76,6 +76,7 @@ class DGLocalization:NSObject {
     func addLanguage(newLang: Locale)  {
         self.availableLocales.append(newLang)
     }
+    
     func getCurrentLanguage()->Locale {
         return currentLocale
     }
@@ -110,7 +111,6 @@ class DGLocalization:NSObject {
 
 //MARK:- Locale
 class Locale: NSObject {
-    
     var name:NSString?
     var languageCode:NSString?
     var countryCode:NSString?
@@ -126,7 +126,6 @@ class Locale: NSObject {
 
 //MARK:- extension
 extension String {
-    
      var localize:String{
         return DGLocalization.sharedInstance.getTranslationForKey(key: self as NSString) as String
     }
