@@ -1,0 +1,6 @@
+framework module Pods_DGLocalization_Tests {
+  umbrella header "Pods-DGLocalization_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

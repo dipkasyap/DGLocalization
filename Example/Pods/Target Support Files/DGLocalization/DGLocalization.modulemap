@@ -1,0 +1,6 @@
+framework module DGLocalization {
+  umbrella header "DGLocalization-umbrella.h"
+
+  export *
+  module * { export * }
+}

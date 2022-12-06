@@ -1,0 +1,50 @@
+PODS:
+  - DGLocalization (0.1.1)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - iOSSnapshotTestCase (8.0.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 8.0.0)
+  - iOSSnapshotTestCase/Core (8.0.0)
+  - iOSSnapshotTestCase/SwiftSupport (8.0.0):
+    - iOSSnapshotTestCase/Core
+  - Nimble (10.0.0)
+  - Nimble-Snapshots (9.4.0):
+    - Nimble-Snapshots/Core (= 9.4.0)
+  - Nimble-Snapshots/Core (9.4.0):
+    - iOSSnapshotTestCase (~> 8.0)
+    - Nimble
+  - Quick (2.2.1)
+
+DEPENDENCIES:
+  - DGLocalization (from `../`)
+  - FBSnapshotTestCase (~> 2.1.4)
+  - Nimble (~> 10.0.0)
+  - Nimble-Snapshots (~> 9.4.0)
+  - Quick (~> 2.2.0)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+    - iOSSnapshotTestCase
+    - Nimble
+    - Nimble-Snapshots
+    - Quick
+
+EXTERNAL SOURCES:
+  DGLocalization:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DGLocalization: 7eed7d07e8c36a9c88383ab2a7f814e709757c0d
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
+  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
+  Nimble-Snapshots: ef281b908c604f78c8313587e25ea92c8ab513d7
+  Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+
+PODFILE CHECKSUM: 09ace682e566ac99754f7739c513df94fd576983
+
+COCOAPODS: 1.11.3
